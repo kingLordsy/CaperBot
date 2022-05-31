@@ -1,0 +1,87 @@
+﻿<Window x:Class="CaperBot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CaperBot"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000" Background="#FF1A1A1A">
+	<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="980" Height="400">
+		<Label Width="310" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,0" Foreground="#FFB1B1B1" Grid.Column="0" Grid.Row="0">
+			Queue
+		</Label>
+		<ScrollViewer HorizontalContentAlignment="Left" Height="375" Width="325" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,30,0,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Background="#FF272727" Grid.Column="0" Name="QueueScrollViewer" AllowDrop="True">
+			<StackPanel Name="QueueStack"  HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Margin="5,5,5,5">
+				
+			</StackPanel>
+		</ScrollViewer>
+		<Label Width="305" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="345,0,0,0" Foreground="#FFB1B1B1" Grid.Column="0" Grid.Row="0">
+			Live
+		</Label>
+		<Grid Background="#FF272727" Width="305" Height="375" Margin="345,30,0,0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Name="LiveDragger" AllowDrop="true">
+			<StackPanel Name="LiveStack" Width="295" Height="365" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Margin="5,5,5,5" AllowDrop="True">
+				
+			</StackPanel>
+		</Grid>
+		<Grid Background="#FF272727" Width="305" Height="375" Margin="665,30,0,0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2">
+			<StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<Label Foreground="#FFB1B1AA" Width="115" Margin="5" Padding="0,0,0,0">
+						Redemption Name:
+					</Label>
+					<TextBox Width="170" Margin="5" Name="QueueRedemptionNameBox">
+
+					</TextBox>
+				</StackPanel>
+				
+				<StackPanel Orientation="Horizontal">
+					<CheckBox HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Foreground="#FFB1B1B1" FlowDirection="RightToLeft" Name="QueueCommandToggleButton">
+						:Queue Command Toggle
+					</CheckBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<CheckBox HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Foreground="#FFB1B1B1" FlowDirection="RightToLeft" Name="PartyCommandToggleButton">
+						:Party Command Toggle
+					</CheckBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<CheckBox HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Foreground="#FFB1B1B1" FlowDirection="RightToLeft" Name="StatsCommandToggleButton">
+						:Stats Command Toggle
+					</CheckBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<Label Foreground="#FFB1B1AA" Width="40" Margin="5" Padding="0,0,0,0">
+						OAuth:
+					</Label>
+					<PasswordBox Width="100" Margin="5" Name="OAuthBox">
+
+					</PasswordBox>
+					<Button Margin="65,0,0,0" Padding="5,1,5,1" Name="SaveOAuthButton">
+						Save OAuth
+					</Button>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<Button Margin="30,0,0,0" Padding="5,4,5,4" Name="ConnectButton">
+						Connect
+					</Button>
+					<Button Margin="30,0,0,0" Padding="5,4,5,4" Name="DisconnectButton">
+						Disconnect
+					</Button>
+					<CheckBox VerticalAlignment="Center" Margin="10,2,0,0" Foreground="#FFB1B1B1" Name="AutoConnectToggle">
+						Auto-Connect
+					</CheckBox>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Name="LogOutput" Width="305" Foreground="#FFB1B1B1"  Height="100" TextWrapping="WrapWithOverflow" TextAlignment="Center">
+						
+					</TextBlock>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+					<Button Margin="10" Padding="5,2,5,2" Name="OAuthUrlButton">
+						Open OAuth Url
+					</Button>
+				</StackPanel>
+			</StackPanel>
+		</Grid>
+	</Grid>
+</Window>
